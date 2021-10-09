@@ -24,4 +24,6 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         ApiResponse.sendResponse(response, tokenProvider.generateToken(authentication.getName()), HttpStatus.OK);
     }
+
+
 }
