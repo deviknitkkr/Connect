@@ -9,18 +9,22 @@ public class FacebookOAuth2UserInfo extends OAuth2UserInfo {
 
     @Override
     public String getId() {
-        return (String) attributes.get("id");
+        super.setId(((Integer) attributes.get("id")).toString());
+        return super.getId();
     }
 
     @Override
     public String getName() {
-        return (String) attributes.get("name");
+        super.setName((String) attributes.get("name"));
+        return super.getName();
     }
 
     @Override
     public String getEmail() {
-        return (String) attributes.get("email");
+        super.setEmail((String) attributes.get("email"));
+        return super.getEmail();
     }
+
 
     @Override
     public String getImageUrl() {
@@ -29,7 +33,8 @@ public class FacebookOAuth2UserInfo extends OAuth2UserInfo {
             if(pictureObj.containsKey("data")) {
                 Map<String, Object>  dataObj = (Map<String, Object>) pictureObj.get("data");
                 if(dataObj.containsKey("url")) {
-                    return (String) dataObj.get("url");
+                    super.setImageUrl((String) dataObj.get("url"));
+                    return super.getImageUrl();
                 }
             }
         }

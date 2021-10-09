@@ -1,23 +1,20 @@
 package com.vikas.connect.security.oauth2.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
 import java.util.Map;
 
+@RequiredArgsConstructor
+@Data
 public abstract class OAuth2UserInfo {
-    protected Map<String, Object> attributes;
 
-    public OAuth2UserInfo(Map<String, Object> attributes) {
-        this.attributes = attributes;
-    }
-
-    public Map<String, Object> getAttributes() {
-        return attributes;
-    }
-
-    public abstract String getId();
-
-    public abstract String getName();
-
-    public abstract String getEmail();
-
-    public abstract String getImageUrl();
+    @JsonIgnore
+    final protected Map<String, Object> attributes;
+    private String id;
+    private String name;
+    private String email;
+    private String imageUrl;
+    private String token;
 }
