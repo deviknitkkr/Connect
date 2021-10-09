@@ -1,9 +1,12 @@
 package com.vikas.connect.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.sql.Timestamp;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -40,6 +43,16 @@ public class ApiResponse<T> {
         apiResponse.setMessage(error);
 
         return apiResponse;
+    }
+
+    public static <T> void sendResponse(HttpServletResponse response, T result,HttpStatus httpStatus) throws IOException {
+        ApiResponse<T> response1 = ApiResponse.from(result, httpStatus);
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        response.resetBuffer();
+        response.setHeader("Content-Type", "application/json");
+        response.getWriter().print(objectMapper.writeValueAsString(response1));
+        response.flushBuffer();
     }
 
 }

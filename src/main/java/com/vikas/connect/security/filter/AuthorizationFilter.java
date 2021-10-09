@@ -26,6 +26,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     private static final String[] excluded_urls = {
             "/login",
             "/register",
+            "/oauth2/**",
             "/favicon.ico"
     };
 
@@ -69,7 +70,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
         response.resetBuffer();
         response.setHeader("Content-Type", "application/json");
-        response.getOutputStream().print(objectMapper.writeValueAsString(error));
+        response.getWriter().print(objectMapper.writeValueAsString(error));
         response.flushBuffer();
     }
 }

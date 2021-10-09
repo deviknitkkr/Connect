@@ -13,7 +13,21 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
 
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 9b22077ea2e868fd4684
+            clientSecret: fc309e704992dd9bac3877ee563f8241045359c8
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+#            scope:
+#              - user:email
+#              - read:user
+
 
 app:
   jwt-header: Authorization
   jwt-secret: somerandomsecretkey
+
+
