@@ -26,7 +26,6 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     private static final String[] excluded_urls = {
             "/login",
             "/register",
-            "/oauth2/**",
             "/favicon.ico"
     };
 
