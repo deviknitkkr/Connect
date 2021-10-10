@@ -34,5 +34,3 @@ spring:
 app:
   jwt-header: Authorization
   jwt-secret: somerandomsecretkey
-
-

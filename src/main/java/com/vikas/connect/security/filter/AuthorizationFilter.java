@@ -4,6 +4,7 @@ package com.vikas.connect.security.filter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vikas.connect.security.TokenProvider;
 import com.vikas.connect.util.ApiResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -21,12 +22,15 @@ import java.io.IOException;
 import java.util.stream.Stream;
 
 @Component
+@Slf4j
 public class AuthorizationFilter extends OncePerRequestFilter {
 
     private static final String[] excluded_urls = {
             "/login",
             "/register",
-            "/favicon.ico"
+            "/v3/api-docs/**",
+            "/swagger-ui.html",
+            "/swagger-ui/**"
     };
 
     private static final AntPathMatcher pathMatcher = new AntPathMatcher();
@@ -60,6 +64,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String url = request.getRequestURI();
+        log.info(request.getRemoteAddr()+":"+url);
         return Stream.of(excluded_urls).anyMatch(x -> pathMatcher.match(x, url));
     }
 

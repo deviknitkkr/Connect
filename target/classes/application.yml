@@ -20,14 +20,17 @@ spring:
           github:
             clientId: 9b22077ea2e868fd4684
             clientSecret: fc309e704992dd9bac3877ee563f8241045359c8
-            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
-#            scope:
-#              - user:email
-#              - read:user
+            scope:
+              - user:email
+              - read:user
+          google:
+            clientId: 358853118375-4crvhc5fo1bql2mk33h21olqutq1fjeb.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+              - email
+              - profile
 
 
 app:
   jwt-header: Authorization
   jwt-secret: somerandomsecretkey
-
-
