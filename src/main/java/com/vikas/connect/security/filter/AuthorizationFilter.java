@@ -64,7 +64,7 @@ public class AuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String url = request.getRequestURI();
-        log.info(request.getRemoteAddr()+":"+url);
+        log.info(request.getRemoteAddr() + ":" + url);
         return Stream.of(excluded_urls).anyMatch(x -> pathMatcher.match(x, url));
     }
 

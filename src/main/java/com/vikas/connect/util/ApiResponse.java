@@ -45,7 +45,7 @@ public class ApiResponse<T> {
         return apiResponse;
     }
 
-    public static <T> void sendResponse(HttpServletResponse response, T result,HttpStatus httpStatus) throws IOException {
+    public static <T> void sendResponse(HttpServletResponse response, T result, HttpStatus httpStatus) throws IOException {
         ApiResponse<T> response1 = ApiResponse.from(result, httpStatus);
         ObjectMapper objectMapper = new ObjectMapper();
 

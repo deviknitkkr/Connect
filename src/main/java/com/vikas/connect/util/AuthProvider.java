@@ -1,6 +1,6 @@
 package com.vikas.connect.util;
 
-public enum  AuthProvider {
+public enum AuthProvider {
     local,
     facebook,
     google,
