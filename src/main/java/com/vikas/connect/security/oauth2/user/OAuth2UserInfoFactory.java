@@ -15,6 +15,8 @@ public class OAuth2UserInfoFactory {
             return new FacebookOAuth2UserInfo(attributes);
         } else if (registrationId.equalsIgnoreCase(AuthProvider.github.toString())) {
             return new GithubOAuth2UserInfo(attributes);
+        } else if (registrationId.equalsIgnoreCase(AuthProvider.onelogin.toString())) {
+            return new OneLoginOAuth2UserInfo(attributes);
         } else {
             throw new Exception("Sorry! Login with " + registrationId + " is not supported yet.");
         }

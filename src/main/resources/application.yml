@@ -29,6 +29,23 @@ spring:
             scope:
               - email
               - profile
+          onelogin:
+            clientId: 7946e770-10b3-013a-4779-026763a06a77198622
+            clientSecret: 9d0bd8d67eb16beeca236dfc8fd4d0498e1eb042c3db0210c76dd1f28cb01282
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - openid
+              - profile
+              - email
+              - name
+        provider:
+          onelogin:
+            authorizationUri: https://deviknitkkr-dev.onelogin.com/oidc/2/auth
+            tokenUri: https://deviknitkkr-dev.onelogin.com/oidc/2/token
+            userInfoUri: https://deviknitkkr-dev.onelogin.com/oidc/2/me
+            jwkSetUri: https://deviknitkkr-dev.onelogin.com/oidc/2/certs
+            userNameAttribute: sub
 
 
 app:
