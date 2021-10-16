@@ -38,7 +38,6 @@ spring:
               - openid
               - profile
               - email
-              - name
         provider:
           onelogin:
             authorizationUri: https://deviknitkkr-dev.onelogin.com/oidc/2/auth
