@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0ec44b-a3a4-44cb-be39-aaada9e8763a" name="Default Changelist" comment="added onelogin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/CustomOicdUserService.java" afterDir="false" />
+    <list default="true" id="df0ec44b-a3a4-44cb-be39-aaada9e8763a" name="Default Changelist" comment="implemented onelogin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/CustomOAuth2UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/OAuth2AuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/OAuth2AuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/FacebookOAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/FacebookOAuth2UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/FacebookOAuth2UserInfo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/GithubOAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/GithubOAuth2UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/GoogleOAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/StdOAuth2UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OneLoginOAuth2UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/util/AuthProvider.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +106,7 @@
       <workItem from="1633779407657" duration="3463000" />
       <workItem from="1633852874826" duration="8328000" />
       <workItem from="1634399071586" duration="10720000" />
-      <workItem from="1634456240577" duration="2191000" />
+      <workItem from="1634456240577" duration="3819000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1633762862573</created>
@@ -185,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634409846598</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implemented onelogin">
+      <created>1634459184354</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1634459184354</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +212,18 @@
     <MESSAGE value="added openApi-3" />
     <MESSAGE value="formatted code" />
     <MESSAGE value="added onelogin" />
-    <option name="LAST_COMMIT_MESSAGE" value="added onelogin" />
+    <MESSAGE value="implemented onelogin" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented onelogin" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/CustomOAuth2UserService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
