@@ -38,7 +38,6 @@ spring:
               - openid
               - profile
               - email
-              - name
         provider:
           onelogin:
             authorizationUri: https://deviknitkkr-dev.onelogin.com/oidc/2/auth
@@ -47,16 +46,6 @@ spring:
             jwkSetUri: https://deviknitkkr-dev.onelogin.com/oidc/2/certs
             userNameAttribute: sub
 
-
-
-
-#issuerUri : http://deviknitkkr-dev.onelogin.com/
-#  accessTokenUri: http://deviknitkkr-dev.onelogin.com/oidc/2/token
-#  userAuthorizationUri: http://deviknitkkr-dev.onelogin.com/oidc/2/auth
-#  tokenName: access_token
-#  authorizedGrantTypes: authorization_code
-#  resource:
-#    userInfoUri: http://deviknitkkr-dev.onelogin.com/oidc/2/me
 
 app:
   jwt-header: Authorization

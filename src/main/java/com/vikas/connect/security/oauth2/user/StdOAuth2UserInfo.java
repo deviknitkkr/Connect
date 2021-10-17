@@ -2,10 +2,10 @@ package com.vikas.connect.security.oauth2.user;
 
 import java.util.Map;
 
-public class OneLoginOAuth2UserInfo extends OAuth2UserInfo{
+public class StdOAuth2UserInfo extends OAuth2UserInfo {
 
-    public OneLoginOAuth2UserInfo(Map<String, Object> attributes) {
-        super(attributes);
+    public StdOAuth2UserInfo(Map<String, Object> attributes,String provider) {
+        super(attributes,provider);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class OneLoginOAuth2UserInfo extends OAuth2UserInfo{
 
     @Override
     public String getImageUrl() {
-        super.setImageUrl("no picture");
+        super.setImageUrl((String) attributes.get("picture"));
         return super.getImageUrl();
     }
 }

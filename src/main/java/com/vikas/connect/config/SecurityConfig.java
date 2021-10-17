@@ -4,6 +4,7 @@ import com.vikas.connect.security.TokenProvider;
 import com.vikas.connect.security.filter.AuthenticationFilter;
 import com.vikas.connect.security.filter.AuthorizationFilter;
 import com.vikas.connect.security.oauth2.CustomOAuth2UserService;
+import com.vikas.connect.security.oauth2.CustomOicdUserService;
 import com.vikas.connect.security.oauth2.OAuth2AuthenticationFailureHandler;
 import com.vikas.connect.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final CustomOAuth2UserService customOAuth2UserService;
     private final OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
     private final OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
+    private final CustomOicdUserService customOicdUserService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -46,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .userInfoEndpoint()
                 .userService(customOAuth2UserService)
+                .oidcUserService(customOicdUserService)
                 .and()
                 .successHandler(oAuth2AuthenticationSuccessHandler)
                 .failureHandler(oAuth2AuthenticationFailureHandler);

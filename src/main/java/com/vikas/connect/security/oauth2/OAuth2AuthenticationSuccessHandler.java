@@ -20,12 +20,15 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
     private final TokenProvider tokenProvider;
     private final CustomOAuth2UserService customOAuth2UserService;
+    private final CustomOicdUserService customOicdUserService;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 
 
         OAuth2UserInfo oAuth2UserInfo = customOAuth2UserService.getUserInfo(authentication.getName());
+        if (oAuth2UserInfo==null)
+            oAuth2UserInfo=customOicdUserService.getUserInfo(authentication.getName());
         oAuth2UserInfo.setToken(tokenProvider.generateToken(oAuth2UserInfo.getId()));
         ApiResponse.sendResponse(response, oAuth2UserInfo, HttpStatus.OK);
     }

@@ -9,16 +9,12 @@ public class OAuth2UserInfoFactory {
 
     @SneakyThrows
     public static OAuth2UserInfo getOAuth2UserInfo(String registrationId, Map<String, Object> attributes) {
-        if (registrationId.equalsIgnoreCase(AuthProvider.google.toString())) {
-            return new GoogleOAuth2UserInfo(attributes);
-        } else if (registrationId.equalsIgnoreCase(AuthProvider.facebook.toString())) {
-            return new FacebookOAuth2UserInfo(attributes);
+        if (registrationId.equalsIgnoreCase(AuthProvider.facebook.toString())) {
+            return new FacebookOAuth2UserInfo(attributes,registrationId);
         } else if (registrationId.equalsIgnoreCase(AuthProvider.github.toString())) {
-            return new GithubOAuth2UserInfo(attributes);
-        } else if (registrationId.equalsIgnoreCase(AuthProvider.onelogin.toString())) {
-            return new OneLoginOAuth2UserInfo(attributes);
+            return new GithubOAuth2UserInfo(attributes,registrationId);
         } else {
-            throw new Exception("Sorry! Login with " + registrationId + " is not supported yet.");
+            return new StdOAuth2UserInfo(attributes,registrationId);
         }
     }
 }

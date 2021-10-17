@@ -17,4 +17,5 @@ public abstract class OAuth2UserInfo {
     private String email;
     private String imageUrl;
     private String token;
+    private final String provider;
 }

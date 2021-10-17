@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class GithubOAuth2UserInfo extends OAuth2UserInfo {
 
-    public GithubOAuth2UserInfo(Map<String, Object> attributes) {
-        super(attributes);
+    public GithubOAuth2UserInfo(Map<String, Object> attributes,String provider) {
+        super(attributes,provider);
     }
 
     @Override
