@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df0ec44b-a3a4-44cb-be39-aaada9e8763a" name="Default Changelist" comment="implemented onelogin">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/entity/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/entity/Reaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/repository/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/repository/ReactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/FacebookOAuth2UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/GithubOAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/GithubOAuth2UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikas/connect/security/oauth2/user/OAuth2UserInfoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikas/connect/util/AuthProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +35,14 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Inspector" value="true" />
         <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
       </map>
@@ -60,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vikas/connect/security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vikas/connect" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -71,6 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vikas\Documents\Java Projects\Connect\src\main\java\com\vikas\connect" />
       <recent name="C:\Users\vikas\Documents\Java Projects\Connect\src\main\java\com\vikas\connect\security" />
     </key>
   </component>
@@ -107,6 +116,7 @@
       <workItem from="1633852874826" duration="8328000" />
       <workItem from="1634399071586" duration="10720000" />
       <workItem from="1634456240577" duration="3819000" />
+      <workItem from="1635432771061" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1633762862573</created>
